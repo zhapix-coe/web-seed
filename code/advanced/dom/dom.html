@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD Interns</title>
+
+  <link rel="stylesheet" href="dom.css">
+  <!-- Links an external CSS file for styling -->
+</head>
+
+<body>
+  <h2>Interns CRUD</h2>
+  <!-- Heading for the page -->
+
+  <!-- Form to add or edit intern information -->
+  <form id="internForm">
+    <input type="text" id="name" placeholder="Name" required>
+    <!-- Text input for intern's name (required) -->
+
+    <input type="text" id="phone" placeholder="Phone" required>
+    <!-- Text input for intern's phone number (required) -->
+
+    <input type="email" id="email" placeholder="Email" required>
+    <!-- Email input field (required) -->
+
+    <button type="submit">Add Intern</button>
+    <!-- Submit button for the form -->
+  </form>
+
+  <!-- Table to display intern data -->
+  <table border="1" id="internTable">
+    <thead>
+      <tr>
+        <!-- Table headers with class for styling -->
+        <th class="header-color">Name</th>
+        <th class="header-color">Phone</th>
+        <th class="header-color">Email</th>
+        <th class="header-color">Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+    <!-- Table body where new intern rows will be added -->
+</body>
+
+</html>

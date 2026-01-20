@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Page Lifecycle</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+        #content {
+            padding: 20px;
+            background-color: white;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Page Lifecycle Example</h1>
+    <div id="content">Page is loading...</div>
+
+    <script>
+        // DOM is still being constructed
+        document.getElementById('content').innerHTML = 'DOM is being constructed...';
+
+        // When the DOM is fully loaded (DOMContentLoaded event)
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log('DOM fully loaded');
+            document.getElementById('content').innerHTML = 'DOM fully loaded! Waiting for all resources to load...';
+        });
+
+        // When all resources are loaded (images, stylesheets, etc.)
+        window.addEventListener("load", function() {
+            console.log('Page fully loaded');
+            document.getElementById('content').innerHTML = 'All resources have been loaded! Page is now fully interactive.';
+        });
+
+        window.addEventListener("click",function(){
+            console.log("User Clicked");
+            document.getElementById('content').innerHTML = 'User interacted with the page!';
+            document.body.style.backgroundColor = 'lightblue';
+
+
+        })
+    </script>
+
+</body>
+</html>

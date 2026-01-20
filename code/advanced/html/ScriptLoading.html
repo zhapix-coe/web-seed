@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Loading Example</title>
+</head>
+<body>
+
+    <h1>Script Loading Demo</h1>
+    <div id="content">Content goes here...</div>
+
+    <!-- Script with default behavior (blocking) -->
+    <script>
+        console.log('This script is loaded and executed immediately, blocking further HTML parsing.');
+        document.getElementById('content').innerHTML += '<p>Script without async or defer loaded.</p>';
+    </script>
+
+    <!-- Async script (may run anytime after being downloaded) -->
+    <script async src="async-script.js"></script>
+
+    <!-- Defer script (executes after the DOM is fully parsed) -->
+    <script defer src="defer-script.js"></script>
+
+    <script>
+        // Inline script to show when DOM is fully parsed
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log('DOM fully parsed.');
+            document.getElementById('content').innerHTML += '<p>DOM fully parsed and interactive.</p>';
+        });
+    </script>
+
+</body>
+</html>

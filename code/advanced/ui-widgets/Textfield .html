@@ -1,0 +1,93 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Basic Text Field</title>
+       <style>
+           body {
+               font-family: Arial, sans-serif;
+               padding: 30px;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               background-color: #f7f7f7;
+           }
+   
+           .input-container {
+               width: 90%;
+               max-width: 350px;
+               padding: 25px;
+               background-color: white;
+               border: 1px solid #ddd;
+               border-radius: 8px;
+               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+           }
+   
+           label {
+               display: block;
+               margin-bottom: 8px;
+               font-weight: bold;
+               color: #333;
+           }
+   
+           /* Basic Text Input Styling */
+           input[type="text"] {
+               padding: 10px;
+               border: 1px solid #ccc;
+               border-radius: 4px;
+               font-size: 16px;
+               width: 100%;
+               box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+               transition: border-color 0.2s;
+           }
+   
+           input[type="text"]:focus {
+               border-color: #007bff;
+               outline: none;
+           }
+   
+           #output {
+               margin-top: 20px;
+               padding: 10px;
+               background-color: #e3f2fd;
+               border: 1px solid #007bff;
+               border-radius: 4px;
+               font-size: 1em;
+               color: #007bff;
+           }
+       </style>
+   </head>
+   <body>
+   
+       <div class="input-container">
+           <label for="textField">Enter Your Name or Title:</label>
+           
+           <!-- The core HTML Text Input -->
+           <input type="text" id="textField" placeholder="Type here...">
+           
+           <!-- Output element to display the typed text -->
+           <p id="output">Text will appear here as you type.</p>
+       </div>
+   
+       <script>
+           document.addEventListener('DOMContentLoaded', () => {
+               const textField = document.getElementById('textField');
+               const outputDisplay = document.getElementById('output');
+   
+               // Listen for the 'input' event, which fires every time the value changes
+               textField.addEventListener('input', (event) => {
+                   const inputText = event.target.value;
+                   
+                   if (inputText) {
+                       outputDisplay.textContent = `You Typed: ${inputText}`;
+                   } else {
+                       outputDisplay.textContent = 'Text will appear here as you type.';
+                   }
+               });
+           });
+       </script>
+   </body>
+   </html>
+   
+  

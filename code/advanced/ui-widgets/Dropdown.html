@@ -1,0 +1,129 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Interactive Dropdown Menu</title>
+       <style>
+           /* Base styling */
+           body {
+               padding: 50px;
+               font-family: Arial, sans-serif;
+               background-color: #f4f7f6;
+           }
+   
+           /* 1. Dropdown Container - Essential for positioning */
+           .dropdown {
+               position: relative; 
+               display: inline-block;
+           }
+   
+           /* 2. Button Styling (The Toggle) */
+           .dropdown-toggle {
+               background-color: #007bff;
+               color: white;
+               padding: 10px 15px;
+               font-size: 16px;
+               border: none;
+               border-radius: 4px;
+               cursor: pointer;
+               transition: background-color 0.2s;
+           }
+   
+           .dropdown-toggle:hover {
+               background-color: #0056b3;
+           }
+   
+           /* 3. Menu Styling */
+           .dropdown-menu {
+               position: absolute;
+               top: 100%; /* Position right below the button */
+               left: 0;
+               z-index: 1000;
+               list-style: none;
+               padding: 0;
+               margin: 4px 0 0 0;
+               min-width: 180px;
+               background-color: white;
+               border: 1px solid #ccc;
+               border-radius: 4px;
+               box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+               
+               /* KEY: Hidden by default. JS adds the 'show' class to display it. */
+               display: none; 
+           }
+   
+           /* Menu Item Link Styles */
+           .dropdown-menu li a {
+               display: block;
+               padding: 10px 15px;
+               text-decoration: none;
+               color: #333;
+               white-space: nowrap;
+           }
+   
+           .dropdown-menu li a:hover {
+               background-color: #f1f1f1;
+           }
+   
+           /* 4. JavaScript State Class */
+           .show {
+               display: block;
+           }
+       </style>
+   </head>
+   <body>
+   
+       <h1>User Profile Dropdown</h1>
+       
+       <div class="dropdown">
+           <button class="dropdown-toggle" id="menuButton" aria-expanded="false" aria-controls="dropdownMenu">
+               User Options ▼
+           </button>
+           
+           <ul class="dropdown-menu" id="dropdownMenu">
+               <li><a href="#profile">Profile</a></li>
+               <li><a href="#settings">Settings</a></li>
+               <li><a href="#help">Help & Support</a></li>
+               <li><a href="#logout">Logout</a></li>
+           </ul>
+       </div>
+   
+       <script>
+           document.addEventListener('DOMContentLoaded', () => {
+               const button = document.getElementById('menuButton');
+               const menu = document.getElementById('dropdownMenu');
+   
+               // 1. Function to toggle the menu's visibility
+               function toggleDropdown() {
+                   // Get current state from ARIA attribute
+                   const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                   
+                   // Toggle the 'show' class to make the menu visible/hidden
+                   menu.classList.toggle('show');
+                   
+                   // Update ARIA attribute for screen readers
+                   button.setAttribute('aria-expanded', !isExpanded);
+               }
+   
+               // Attach click listener to the button to open/close the menu
+               button.addEventListener('click', toggleDropdown);
+   
+               // 2. Close the menu when clicking outside (on the rest of the document)
+               document.addEventListener('click', (event) => {
+                   const dropdownContainer = button.parentElement;
+                   
+                   // Check if the click target is outside the entire dropdown component
+                   const isClickOutside = !dropdownContainer.contains(event.target);
+                   
+                   // If the menu is currently open AND the click was outside
+                   if (menu.classList.contains('show') && isClickOutside) {
+                       menu.classList.remove('show');
+                       button.setAttribute('aria-expanded', 'false');
+                   }
+               });
+           });
+       </script>
+   </body>
+   </html>
+  

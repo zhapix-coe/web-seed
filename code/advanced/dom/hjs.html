@@ -1,0 +1,110 @@
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Starts the HTML document and sets language to English -->
+
+<head>
+  <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 -->
+  <title>Interns Table</title> <!-- Page title shown in the browser tab -->
+</head>
+
+<body>
+  <h2>Interns Table</h2> <!-- Main heading -->
+
+  <!-- Intern input form -->
+  <form id="internForm"> <!-- Form with ID for JavaScript reference -->
+    <input type="text" id="name" placeholder="Name" required> <!-- Input for name -->
+    <input type="text" id="phone" placeholder="Phone" required> <!-- Input for phone -->
+    <input type="email" id="email" placeholder="Email" required> <!-- Input for email -->
+    <button type="submit">Add Intern</button> <!-- Submit button -->
+  </form>
+
+  <!-- Table to display intern data -->
+  <table border="1" id="internTable"> <!-- Table with ID for JavaScript use -->
+    <thead>
+      <tr>
+        <th>Name</th> <!-- Header for Name column -->
+        <th>Phone</th> <!-- Header for Phone column -->
+        <th>Email</th> <!-- Header for Email column -->
+        <th>Actions</th> <!-- Header for Edit/Delete buttons -->
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Pre-filled row 1 -->
+      <tr>
+        <td>Aarthi Gopal</td> <!-- Intern Name -->
+        <td>994454533</td> <!-- Intern Phone -->
+        <td>aarthi@example.com</td> <!-- Intern Email -->
+        <td>
+          <button onclick="editRow(this)">Edit</button> <!-- Edit button -->
+          <button onclick="deleteRow(this)">Delete</button> <!-- Delete button -->
+        </td>
+      </tr>
+      <!-- Pre-filled row 2 -->
+      <tr>
+        <td>Sneha Reddy</td>
+        <td>9876543210</td>
+        <td>sneha@example.com</td>
+        <td>
+          <button onclick="editRow(this)">Edit</button>
+          <button onclick="deleteRow(this)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- JavaScript goes here -->
+  <script>
+    const form = document.getElementById('internForm'); // Get the form element by ID
+    const tableBody = document.querySelector('#internTable tbody'); // Select the table body
+
+    // Event listener for form submission
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent the page from refreshing
+
+      // Get the values from input fields
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+
+      // Create a new table row
+      const row = document.createElement('tr');
+
+      // Set the inner HTML of the row with values and action buttons
+      row.innerHTML = `
+        <td>${name}</td>
+        <td>${phone}</td>
+        <td>${email}</td>
+        <td>
+          <button onclick="editRow(this)">Edit</button>
+          <button onclick="deleteRow(this)">Delete</button>
+        </td>
+      `;
+
+      // Append the new row to the table
+      tableBody.appendChild(row);
+
+      // Reset the form fields after adding
+      form.reset();
+    });
+
+    // Function to edit a row
+    function editRow(button) {
+      const row = button.closest('tr'); // Get the row containing the button
+      const cells = row.querySelectorAll('td'); // Get all cells in the row
+
+      // Pre-fill form with current row values
+      document.getElementById('name').value = cells[0].textContent;
+      document.getElementById('phone').value = cells[1].textContent;
+      document.getElementById('email').value = cells[2].textContent;
+
+      // Remove the current row to replace it after editing
+      row.remove();
+    }
+
+    // Function to delete a row
+    function deleteRow(button) {
+      button.closest('tr').remove(); // Find and remove the row containing the button
+    }
+  </script>
+</body>
+
+</html>

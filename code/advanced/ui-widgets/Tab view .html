@@ -1,0 +1,139 @@
+       <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Basic Tab View</title>
+       <style>
+           body {
+               font-family: Arial, sans-serif;
+               padding: 30px;
+               background-color: #f7f7f7;
+           }
+   
+           .tabs-container {
+               width: 100%;
+               max-width: 600px;
+               margin: 0 auto;
+               background-color: white;
+               border: 1px solid #ddd;
+               border-radius: 8px;
+               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+           }
+   
+           /* --- Tab Buttons Styling --- */
+           .tab-buttons {
+               display: flex;
+               border-bottom: 1px solid #eee;
+           }
+   
+           .tab-button {
+               flex-grow: 1;
+               padding: 15px 20px;
+               cursor: pointer;
+               border: none;
+               background-color: #f0f0f0;
+               color: #333;
+               font-size: 16px;
+               transition: background-color 0.3s;
+               outline: none;
+           }
+   
+           .tab-button:hover:not(.active) {
+               background-color: #e0e0e0;
+           }
+   
+           /* Active Tab Button */
+           .tab-button.active {
+               background-color: white;
+               border-bottom: 3px solid #007bff; /* Highlight color */
+               font-weight: bold;
+               color: #007bff;
+           }
+   
+           /* --- Tab Content Styling --- */
+           .tab-content {
+               padding: 20px;
+               /* Key CSS: Hide all content panes by default */
+               display: none;
+               line-height: 1.6;
+               color: #555;
+           }
+   
+           /* Key CSS: Show only the active content pane */
+           .tab-content.active {
+               display: block;
+           }
+       </style>
+   </head>
+   <body>
+   
+       <div class="tabs-container">
+           
+           <!-- Tab Buttons -->
+           <div class="tab-buttons">
+               <button class="tab-button active" data-tab-id="tab1">Details</button>
+               <button class="tab-button" data-tab-id="tab2">Reviews</button>
+               <button class="tab-button" data-tab-id="tab3">FAQ</button>
+           </div>
+   
+           <!-- Tab Content -->
+           <div class="tab-content-container">
+               
+               <div id="tab1" class="tab-content active">
+                   <h2>Product Details</h2>
+                   <p>This section contains a comprehensive description of the product, including its features, specifications, and dimensions. It is the primary content area.</p>
+               </div>
+   
+               <div id="tab2" class="tab-content">
+                   <h2>Customer Reviews</h2>
+                   <p>Read what other users are saying about this item. We currently have 4.5 stars based on 150 verified purchases.</p>
+               </div>
+   
+               <div id="tab3" class="tab-content">
+                   <h2>Frequently Asked Questions</h2>
+                   <p>Find quick answers to common questions regarding ordering, shipping, and returns in this dedicated section.</p>
+               </div>
+   
+           </div>
+       </div>
+   
+       <script>
+           document.addEventListener('DOMContentLoaded', () => {
+               const tabButtons = document.querySelectorAll('.tab-button');
+               const tabContents = document.querySelectorAll('.tab-content');
+   
+               // Function to handle switching tabs
+               function switchTab(targetId) {
+                   // 1. Deactivate all buttons and content
+                   tabButtons.forEach(button => button.classList.remove('active'));
+                   tabContents.forEach(content => content.classList.remove('active'));
+   
+                   // 2. Activate the clicked button
+                   const newActiveButton = document.querySelector(`[data-tab-id="${targetId}"]`);
+                   if (newActiveButton) {
+                       newActiveButton.classList.add('active');
+                   }
+   
+                   // 3. Show the corresponding content
+                   const newActiveContent = document.getElementById(targetId);
+                   if (newActiveContent) {
+                       newActiveContent.classList.add('active');
+                   }
+               }
+   
+               // Add event listeners to all tab buttons
+               tabButtons.forEach(button => {
+                   button.addEventListener('click', () => {
+                       const targetId = button.getAttribute('data-tab-id');
+                       switchTab(targetId);
+                   });
+               });
+   
+               // Optional: Initially load the first tab (handled by initial 'active' classes in HTML)
+           });
+       </script>
+   </body>
+   </html>
+   
+  

@@ -1,0 +1,88 @@
+       <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Basic Slider Component</title>
+       <style>
+           body {
+               font-family: Arial, sans-serif;
+               padding: 30px;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+           }
+   
+           .slider-container {
+               width: 80%;
+               max-width: 500px;
+               margin-top: 20px;
+               padding: 20px;
+               border: 1px solid #ccc;
+               border-radius: 8px;
+               background-color: #f9f9f9;
+           }
+   
+           label {
+               display: block;
+               margin-bottom: 10px;
+               font-weight: bold;
+               font-size: 1.1em;
+               color: #333;
+           }
+   
+           /* Basic styling for the range input */
+           input[type=range] {
+               width: 100%;
+               height: 25px;
+               cursor: pointer;
+               margin-top: 5px;
+               /* Browser-specific styling for appearance can be complex,
+                  so we rely on native appearance for a basic example. */
+           }
+   
+           #sliderValue {
+               margin-top: 15px;
+               font-size: 1.2em;
+               color: #007bff;
+               font-weight: bold;
+           }
+       </style>
+   </head>
+   <body>
+   
+       <div class="slider-container">
+           <label for="volumeSlider">Volume Level</label>
+           
+           <!-- The core HTML Range Input -->
+           <input type="range" 
+                  id="volumeSlider" 
+                  min="0" 
+                  max="100" 
+                  value="50" 
+                  step="1">
+           
+           <!-- Output element to show the current value -->
+           <p id="sliderValue">Current Value: 50</p>
+       </div>
+   
+       <script>
+           document.addEventListener('DOMContentLoaded', () => {
+               const slider = document.getElementById('volumeSlider');
+               const valueDisplay = document.getElementById('sliderValue');
+   
+               // Function to update the displayed value
+               const updateValue = () => {
+                   valueDisplay.textContent = `Current Value: ${slider.value}`;
+               };
+   
+               // 1. Initial update (in case the default value isn't 50)
+               updateValue();
+   
+               // 2. Update the value whenever the user drags the slider handle
+               slider.addEventListener('input', updateValue);
+           });
+       </script>
+   </body>
+   </html>
+  

@@ -1,0 +1,82 @@
+       <!DOCTYPE html>
+   <html lang="en">
+    <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Clean Button Code</title>
+     <style>
+           body {
+               font-family: Arial, sans-serif;
+               background: #f0f0f0;
+               padding: 50px;
+               margin: 0;
+           }
+   
+           /* Button styling */
+           #myButton { /* Using ID for specific styling/targeting */
+               background-color: #4CAF50;
+               color: white;
+               padding: 15px 30px;
+               font-size: 16px;
+               border: none;
+               border-radius: 5px;
+               cursor: pointer;
+           }
+   
+           /* Hover effect */
+           #myButton:hover {
+               background-color: #45a049;
+           }
+   
+           /* Result message */
+           .result {
+               margin-top: 20px;
+               padding: 10px;
+               background: white;
+               border-radius: 5px;
+               display: none;
+           }
+   
+           /* Optional: utility class to manage visibility */
+           .show {
+               display: block !important;
+           }
+       </style>
+    </head>
+    <body>
+     <h1>Simple Button Example</h1>
+     <button id="myButton">Click This Button</button>
+   
+     <div class="result" id="resultMessage">
+      Button was clicked successfully! ✅
+     </div>
+   
+     <script>
+           // Use modern best practice: DOMContentLoaded ensures the elements exist before we try to select them
+           document.addEventListener('DOMContentLoaded', () => {
+               // Get the button and message elements once
+               const button = document.getElementById('myButton');
+               const messageElement = document.getElementById('resultMessage');
+   
+               /**
+                * Handles the button click: shows the message and hides it after a delay.
+                */
+               function buttonClicked() {
+                   // Show the message by adding a class
+                   messageElement.classList.add('show');
+                   
+                   // Hide it after 3 seconds
+                   setTimeout(() => {
+                       // Hide the message by removing the class
+                       messageElement.classList.remove('show');
+                   }, 3000);
+               }
+   
+               // Attach the function to the button's click event
+               button.addEventListener('click', buttonClicked);
+           });
+       </script>
+    </body>
+   </html>
+   
+  

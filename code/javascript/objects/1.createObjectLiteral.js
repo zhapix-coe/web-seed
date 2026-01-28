@@ -7,7 +7,6 @@ let formData = {
   city: "Pune",
   country: "India",
 };
-
 console.log("Form Data--->", formData);
 
 

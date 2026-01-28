@@ -17,7 +17,6 @@ function calculatePrice(count, price) {
     let discountValue = 10;
     var netPrice = calculatedPrice - discountValue;
   }
-
   return netPrice;
 }
 
@@ -26,6 +25,5 @@ if (itemName == "NoteBook") {
   let bindingCost = 10;
   totalPrice = calculatePrice(itemCount, unitPrice) + bindingCost;
 }
-
-console.log("Function Variable - calculatedPrice - Outside Function",calculatedPrice);
+console.log("Function Variable - calculatedPrice - Outside Function", calculatedPrice);
 console.log("********************************************************");

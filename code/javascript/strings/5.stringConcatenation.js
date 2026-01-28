@@ -1,12 +1,11 @@
 // To understand about string concatenation
-
 let internName = 'Santhosh';
 let programName = 'Internship';
 
 //Using + Operator: 
 console.log('***************************************************************************');
 console.log('Using + Operator');
-let concatenation1 =''+ internName+' has enrolled in an '+ programName + ' Program';
+let concatenation1 = '' + internName + ' has enrolled in an ' + programName + ' Program';
 console.log(concatenation1);
 console.log('***************************************************************************');
 

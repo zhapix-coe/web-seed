@@ -9,6 +9,5 @@ let nestedFormData = {
     country: "India",
   },
 };
-
 console.log('NestedFormData ----> ', nestedFormData);
 

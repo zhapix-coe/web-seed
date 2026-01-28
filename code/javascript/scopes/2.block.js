@@ -11,12 +11,11 @@ function calculatePrice(count, price) {
 }
 
 // Block to check for NoteBook
-if (itemName == "NoteBook") {  
-  let bindingCost=10;
-  console.log('Block Variable - bindingCost - Inside block',bindingCost);
+if (itemName == "NoteBook") {
+  let bindingCost = 10;
+  console.log('Block Variable - bindingCost - Inside block', bindingCost);
   console.log('********************************************************');
-  totalPrice = calculatePrice(itemCount, unitPrice)+bindingCost;
+  totalPrice = calculatePrice(itemCount, unitPrice) + bindingCost;
 }
-
-console.log('Block Variable - bindingCost - Outside Block',bindingCost);
+console.log('Block Variable - bindingCost - Outside Block', bindingCost);
 console.log('********************************************************');

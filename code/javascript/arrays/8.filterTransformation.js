@@ -1,6 +1,5 @@
 // Ways of transforming an array to another array or else
 console.log('******************************************************************************************');
-
 let stationaryItems = ["NoteBook", "Pen", "Stapler", "Marker"];
 
 // Filter the stationary items not containing Pen

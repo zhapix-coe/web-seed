@@ -8,10 +8,8 @@ for(let index=0;index<stationaryItems.length;index++){
 }
 console.log('************************************************************');
 
-
 // Using Array function forEach()
 stationaryItems.forEach(function(item){
     console.log('Current Item:',item);    
 })
-
 console.log('************************************************************');

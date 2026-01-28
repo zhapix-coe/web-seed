@@ -1,9 +1,7 @@
 // To find index of a character/string in a string
-
-let enrollmentDetails='Santhosh has enrolled in an Internship Program';
+let enrollmentDetails = 'Santhosh has enrolled in an Internship Program';
 
 // To find the position of First and Last character in a String
-
 let indexOfFirstLetter = enrollmentDetails.indexOf('S');
 let indexOfLastCharacter = enrollmentDetails.indexOf('m');
 console.log('***************************************************************************');

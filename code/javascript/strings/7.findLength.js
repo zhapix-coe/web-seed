@@ -1,6 +1,5 @@
 // To find length of a string
-
-let enrollmentDetails='Santhosh has enrolled in an Internship Program';
+let enrollmentDetails = 'Santhosh has enrolled in an Internship Program';
 
 // To find Length of a String
 let stringLength = enrollmentDetails.length;

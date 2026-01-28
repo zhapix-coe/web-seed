@@ -5,7 +5,6 @@ let penCount = 20;
 let pencilCount = 30;
 let discountPercent = 10;
 let discountPrice = 0;
-
 console.log('---------------------------------------------------------');
 
 // Addition
@@ -20,7 +19,7 @@ console.log('---------------------------------------------------------');
 
 // Division
 discountPrice = (totalPrice * discountPercent) / 100;
-console.log("Dicounted price-->",discountPrice);
+console.log("Dicounted price-->", discountPrice);
 console.log('---------------------------------------------------------');
 
 // Subtraction

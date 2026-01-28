@@ -1,8 +1,7 @@
 
-
 let stationaryItem = {
-    name:'NoteBook',
-    quantity:10
+    name: 'NoteBook',
+    quantity: 10
 }
 console.log('******************************************************');
 
@@ -12,6 +11,6 @@ let itemQuantity = stationaryItem.quantity;
 console.log(`ItemName=${itemName} and ItemQuantity=${itemQuantity}`);
 console.log('******************************************************');
 
-let {name,quantity} = stationaryItem;
+let { name, quantity } = stationaryItem;
 console.log(`ItemName=${name} and ItemQuantity=${quantity}`);
 console.log('******************************************************');

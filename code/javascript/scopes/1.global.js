@@ -21,6 +21,5 @@ if (itemName == "NoteBook") {
   totalPrice = calculatePrice(itemCount, unitPrice);
 }
 
-
 console.log("Global Variable - totalPrice", totalPrice);
 console.log('********************************************************');

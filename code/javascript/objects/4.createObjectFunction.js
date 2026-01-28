@@ -1,5 +1,3 @@
-
-
 //Object with functions
 let formData = {
   userName: "Santhosh Kumar",
@@ -15,5 +13,4 @@ let formData = {
       : `${this.userName} is not Active`;
   },
 };
-
 console.log("User Status -->", formData.getUserStatus());

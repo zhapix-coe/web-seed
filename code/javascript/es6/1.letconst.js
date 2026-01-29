@@ -1,5 +1,4 @@
 // To Demonstrate the variable declaration using let and const 
-
 // let is block scoped variable
 let stationaryItemName = 'NoteBook';
 const itemPrice = 20;

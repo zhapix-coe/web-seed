@@ -1,4 +1,3 @@
-
 let enrollmentDetails = 'Santhosh has enrolled in an Internship Program';
 
 // To replace the name in a string using replace()

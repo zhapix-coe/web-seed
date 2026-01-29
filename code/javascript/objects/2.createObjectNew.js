@@ -1,4 +1,3 @@
-
 // Using new Object
 let formData = new Object();
 formData.userName = "Rajesh Kumar";

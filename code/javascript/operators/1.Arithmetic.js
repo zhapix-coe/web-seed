@@ -1,5 +1,4 @@
 // Arithmetic Operators - Addition (+), Subtraction (-), Multiplication (*), Division (/)
-
 let notebookCount = 5;
 let penCount = 20;
 let pencilCount = 30;

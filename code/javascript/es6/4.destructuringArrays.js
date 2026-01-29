@@ -1,5 +1,4 @@
 // To demonstrate destructuring of an array and object
-
 console.log('******************************************************');
 // To destructuring an array
 let stationaryItems = ['NoteBook', 'Pen', 'Stapler', 'Marker'];

@@ -1,7 +1,5 @@
 // Create String
-
 // Internship Form
-
 let internName = 'Santhosh';
 let location = "Chennai";
 let qualification = `MCA`;

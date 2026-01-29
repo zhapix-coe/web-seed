@@ -1,4 +1,3 @@
-
 // Stationery items in different categories
 const writingItems = ["Pen", "Pencil"];
 const paperItems = ["Notebook", "Drawing Book"];

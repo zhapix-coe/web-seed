@@ -1,4 +1,3 @@
-
 let stationaryItem = {
     name: 'NoteBook',
     quantity: 10

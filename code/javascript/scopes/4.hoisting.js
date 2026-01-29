@@ -1,5 +1,4 @@
 // Call global variable before declaration
-
 console.log("globalvar::", globalVar);
 // Call block Variable before declaration
 console.log("blockVar=", blockVar);

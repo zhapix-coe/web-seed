@@ -1,5 +1,4 @@
 // Global Scope
-
 let itemName = "NoteBook";
 let itemCategory = "Plain";
 let itemCount = 10;

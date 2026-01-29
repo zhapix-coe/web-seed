@@ -1,4 +1,3 @@
-
 let itemNames = ['Pen','Pencil','NoteBook'];
 let index=0;
 do{

@@ -1,5 +1,4 @@
 // Object Literal
-
 let formData = {
     userName: 'Santhosh Kumar',
     email: 'santhosh.k@gmail.com',

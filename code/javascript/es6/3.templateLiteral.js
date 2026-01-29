@@ -1,5 +1,4 @@
 // Template literal is used to concatenate strings and other data types in modern way
-
 let stationaryItemName = 'NoteBook';
 const itemPrice = 20;
 const itemQuantity = 10;

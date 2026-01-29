@@ -1,5 +1,4 @@
 // Function with Default Parameter Values
-
 let itemName = "NoteBook";
 let itemCount;
 const unitPrice = 25;

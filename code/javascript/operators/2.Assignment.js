@@ -1,5 +1,4 @@
 // Assignment Operator (=)
-
 // Assigning value 10 to variable a
 let a = 10;
 console.log('Initial Value of a -->', a);

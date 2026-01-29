@@ -1,5 +1,4 @@
 // Function Assignment  
-
 let itemName = "NoteBook";
 let itemCount = 10;
 const unitPrice = 25;

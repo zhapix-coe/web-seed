@@ -1,4 +1,3 @@
-
 let stationaryItems = ['NoteBook', 'Pen', 'Stapler', 'Marker'];
 console.log('************************************************************');
 

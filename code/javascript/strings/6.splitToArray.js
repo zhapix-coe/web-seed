@@ -1,5 +1,4 @@
 // To split a string to an array
-
 let techStack = 'Javascript,HTML,CSS,NodeJS,ReactJS,ExpressJS,MongoDB';
 let techStackList = techStack.split(',');
 let typeVal = Array.isArray(techStackList) ? 'Array' : 'Not an Array';

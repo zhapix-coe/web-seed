@@ -1,155 +1,128 @@
-   <!DOCTYPE html>
-   <html lang="en">
-   
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Table Demo</title>
+  </head>
 
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>HTML Table Demo</title>
-   </head>
-   
+  <body>
+    <!-- Basic Table -->
+    <section>
+      <h2>Basic Table</h2>
 
-   <body>
-   <section>
-       <h2> Basic Table</h2>
-   
+      <table border="1" cellspacing="0" cellpadding="10">
+        <caption>
+          <strong>Basic Data</strong>
+        </caption>
+        <thead>
+          <tr>
+            <th>User Id</th>
+            <th>User Name</th>
+            <th>User Email</th>
+          </tr>
+        </thead>
 
-       <table border="1" cellspacing="0" cellpadding="10">
-           <thead>
-               <tr>
-                   <th>User Id</th>
-                   <th>User Name</th>
-                   <th>User Email</th>
-               </tr>
-           </thead>
-   
+        <tbody>
+          <tr>
+            <td>1001</td>
+            <td>Raj Kumar</td>
+            <td>raj@gmail.com</td>
+          </tr>
+          <tr>
+            <td>1002</td>
+            <td>Santhos Kumar</td>
+            <td>santhosh@gmail.com</td>
+          </tr>
 
-           <tbody>
-               <tr>
-                   <td>1001</td>
-                   <td>Raj Kumar</td>
-                   <td>raj@gmail.com</td>
-               </tr>
-               <tr>
-                   <td>1002</td>
-                   <td>Santhos Kumar</td>
-                   <td>santhosh@gmail.com</td>
-               </tr>
-   
+          <tr>
+            <td>1003</td>
+            <td>Kamal Kumar</td>
+            <td>kamal@gmail.com</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Total Users</td>
+            <td>3</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
 
-               <tr>
-                   <td>1003</td>
-                   <td>Kamal Kumar</td>
-                   <td>kamal@gmail.com</td>
-               </tr>
-           </tbody>
-           <tfoot>
-               <tr>
-                   <td colspan="2">Total Users</td>
-                   <td>3</td>
-               </tr>
-   
+    <!-- Advanced - Course Enrollment Data -->
+    <section>
+      <h2>Course Enrollment Data</h2>
 
-           </tfoot>
-       </table>
-       </section>
-   
+      <table
+        border="1"
+        width="90%"
+        align="center"
+        cellpadding="10"
+        cellspacing="0"
+      >
+        <!-- Table Caption -->
+        <caption>
+          <strong>Web Seed Program - Course Enrollment</strong>
+        </caption>
 
-              <section>
-      
-   
+        <!-- Table Header -->
+        <thead bgcolor="#dddddd">
+          <tr>
+            <th>Enrollment ID</th>
+            <th>Student Name</th>
+            <th>Course Name</th>
+            <th>Duration</th>
+            <th>Mode</th>
+            <th>Status</th>
+          </tr>
+        </thead>
 
-              <h2>Course Enrollment Details</h2>
-      
-              <table border="1" width="90%" align="center" cellpadding="10" cellspacing="0">
-   
+        <!-- Table Body -->
+        <tbody>
+          <tr>
+            <td>ENR001</td>
+            <td>Ashok</td>
+            <td rowspan="2">WebSEED (HTML, CSS, JS)</td>
+            <td rowspan="2">6 Weeks</td>
+            <td rowspan="4">Online</td>
+            <td>Enrolled</td>
+          </tr>
 
-                  <!-- Table Caption -->
-                  <caption><strong>Web Seed Program - Course Enrollment</strong></caption>
-      
-   
+          <tr>
+            <td>ENR002</td>
+            <td>Divya</td>
+            <td>Offline</td>
+          </tr>
 
-                  <!-- Table Header -->
-                  <thead bgcolor="#dddddd">
-                      <tr>
-                          <th>Enrollment ID</th>
-                          <th>Student Name</th>
-                          <th>Course Name</th>
-                          <th>Duration</th>
-                          <th>Mode</th>
-                          <th>Status</th>
-                      </tr>
-                  </thead>
-      
-   
+          <tr>
+            <td>ENR003</td>
+            <td>Ravi</td>
+            <td>MERN Stack Basics</td>
+            <td>8 Weeks</td>
+            <td>Waitlisted</td>
+          </tr>
 
-                  <!-- Table Body -->
-                  <tbody>
-                      <tr>
-                          <td>ENR001</td>
-                          <td>Ashok</td>
-                          <td>WebSEED (HTML, CSS, JS)</td>
-                          <td>6 Weeks</td>
-                          <td>Online</td>
-                          <td>Enrolled</td>
-                      </tr>
-      
-   
+          <tr>
+            <td>ENR004</td>
+            <td>Meena</td>
+            <td>UI Development Basics</td>
+            <td>4 Weeks</td>
+            <td>Confirmed</td>
+          </tr>
+        </tbody>
 
-                      <tr>
-                          <td>ENR002</td>
-                          <td>Divya</td>
-                          <td>Web Seed (HTML, CSS, JS)</td>
-                          <td>6 Weeks</td>
-                          <td>Offline</td>
-                          <td>Enrolled</td>
-                      </tr>
-      
-   
+        <!-- Table Footer -->
+        <tfoot bgcolor="#eeeeee">
+          <tr>
+            <td colspan="5">Total</td>
+            <td>4 Students</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
 
-                      <tr>
-                          <td>ENR003</td>
-                          <td>Ravi</td>
-                          <td>MERN Stack Basics</td>
-                          <td>8 Weeks</td>
-                          <td>Online</td>
-                          <td>Waitlisted</td>
-                      </tr>
-      
-   
-
-                      <tr>
-                          <td>ENR004</td>
-                          <td>Meena</td>
-                          <td>UI Development Basics</td>
-                          <td>4 Weeks</td>
-                          <td>Offline</td>
-                          <td>Confirmed</td>
-                      </tr>
-                  </tbody>
-      
-   
-
-                  <!-- Table Footer -->
-                  <tfoot bgcolor="#eeeeee">
-                      <tr>
-                          <td>Total</td>
-                          <td>4 Students</td>
-                          <td>—</td>
-                          <td>—</td>
-                          <td>—</td>
-                          <td>—</td>
-                      </tr>
-                  </tfoot>
-      
-   
-
-              </table>
-       </section>
-     
-   <br><br><br><br><br><br><br><br><br>
-   </body>
-   
-
-   </html>
-  
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>

@@ -11,24 +11,26 @@
 
    <body>
    
-
        <section>
-           <h2>Basic Form</h2>
+           <h2>Basic Form1</h2>
        
        <form>
-           <label for="username">User Name</label>
+           <label for="username">User Name<br>
            <input type="text" name="username" id="username">
+           </label>
+           <br><br>
    
 
-           <label for="password">Password</label>
-           <input type="password" name="password" id="password">
+           <label for="password">Password<br>
+           <input type="password" name="password" id="password"><br>
+           </label><br>
    
 
-           <label for="email"> Email </label>
-           <input type="email" name="email" id="email">
+           <label for="email"> Email </label><br>
+           <input type="email" name="email" id="email"><br><br>
    
 
-           <input type="submit" value="Submit">
+           <input type="submit" value="Submit"><br>
        </form>
        </section>
        <br>
@@ -39,77 +41,48 @@
    
 
       <h2>Course Enrollment Form</h2>
-      
-   
-
       <form action="/submit" method="post">
-      
-   
 
         <label for="fullname">Full Name</label><br>
         <input type="text" id="fullname" name="fullname" placeholder="Enter name" required>
         <br><br>
-      
-   
 
         <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" required>
-        <br><br>
-      
-   
+        <input type="email" id="email" name="email" required>        <br><br>
 
         <label for="password">Password</label><br>
         <input type="password" id="password" name="password">
         <br><br>
-      
-   
 
         <label for="age">Age</label><br>
         <input type="number" id="age" name="age" min="1" max="100">
         <br><br>
-      
-   
 
         <label for="phone">Phone</label><br>
         <input type="tel" id="phone" name="phone">
         <br><br>
-      
-   
 
         <label for="website">Website</label><br>
         <input type="url" id="website" name="website">
         <br><br>
-      
-   
 
         <strong>Gender</strong><br>
         <input type="radio" id="male" name="gender" value="male">
         <label for="male">Male</label>
-      
-   
-
         <input type="radio" id="female" name="gender" value="female">
         <label for="female">Female</label>
         <br><br>
       
-   
-
         <strong>Skills</strong><br>
         <input type="checkbox" id="html" name="skills" value="html">
         <label for="html">HTML</label>
       
-   
-
         <input type="checkbox" id="css" name="skills" value="css">
         <label for="css">CSS</label>
-      
-   
 
         <input type="checkbox" id="js" name="skills" value="js">
         <label for="js">JavaScript</label>
         <br><br>
-      
-   
 
         <label for="course">Course</label><br>
         <select id="course" name="course">
@@ -187,198 +160,17 @@
       <hr>
       <br>
    
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
 
-         <section>
-      <h2>Course Enrollment Form</h2>
-      
-   
-
-      <form action="/submit" method="post">
-        <table border="1" frame="box" rules="none" cellpadding="8">
-      
-   
-
-          <!-- Text -->
-          <tr>
-            <td><label for="fullname">Full Name</label></td>
-            <td><input type="text" id="fullname" name="fullname" placeholder="Enter name" required></td>
-          </tr>
-      
-   
-
-          <!-- Email -->
-          <tr>
-            <td><label for="email">Email</label></td>
-            <td><input type="email" id="email" name="email" required></td>
-          </tr>
-      
-   
-
-          <!-- Password -->
-          <tr>
-            <td><label for="password">Password</label></td>
-            <td><input type="password" id="password" name="password"></td>
-          </tr>
-      
-   
-
-          <!-- Number -->
-          <tr>
-            <td><label for="age">Age</label></td>
-            <td><input type="number" id="age" name="age" min="1" max="100"></td>
-          </tr>
-      
-   
-
-          <!-- Telephone -->
-          <tr>
-            <td><label for="phone">Phone</label></td>
-            <td><input type="tel" id="phone" name="phone"></td>
-          </tr>
-      
-   
-
-          <!-- URL -->
-          <tr>
-            <td><label for="website">Website</label></td>
-            <td><input type="url" id="website" name="website"></td>
-          </tr>
-      
-   
-
-          <!-- Radio -->
-          <tr>
-            <td>Gender</td>
-            <td>
-              <input type="radio" id="male" name="gender" value="male">
-              <label for="male">Male</label>
-      
-   
-
-              <input type="radio" id="female" name="gender" value="female">
-              <label for="female">Female</label>
-            </td>
-          </tr>
-      
-   
-
-          <!-- Checkbox -->
-          <tr>
-            <td>Skills</td>
-            <td>
-              <input type="checkbox" id="html" name="skills" value="html">
-              <label for="html">HTML</label>
-      
-   
-
-              <input type="checkbox" id="css" name="skills" value="css">
-              <label for="css">CSS</label>
-      
-   
-
-              <input type="checkbox" id="js" name="skills" value="js">
-              <label for="js">JavaScript</label>
-            </td>
-          </tr>
-      
-   
-
-          <!-- Select -->
-          <tr>
-            <td><label for="course">Course</label></td>
-            <td>
-              <select id="course" name="course">
-                <option value="">Select</option>
-                <option>Web Development</option>
-                <option>MERN Stack</option>
-                <option>UI/UX</option>
-              </select>
-            </td>
-          </tr>
-      
-   
-
-          <!-- Date -->
-          <tr>
-            <td><label for="dob">Date of Birth</label></td>
-            <td><input type="date" id="dob" name="dob"></td>
-          </tr>
-      
-   
-
-          <!-- Time -->
-          <tr>
-            <td><label for="time">Preferred Time</label></td>
-            <td><input type="time" id="time" name="time"></td>
-          </tr>
-      
-   
-
-          <!-- Datetime Local -->
-          <tr>
-            <td><label for="meeting">Meeting Date & Time</label></td>
-            <td><input type="datetime-local" id="meeting" name="meeting"></td>
-          </tr>
-      
-   
-
-          <!-- Range -->
-          <tr>
-            <td><label for="rating">Rating</label></td>
-            <td><input type="range" id="rating" name="rating" min="1" max="10"></td>
-          </tr>
-      
-   
-
-          <!-- Color -->
-          <tr>
-            <td><label for="color">Favorite Color</label></td>
-            <td><input type="color" id="color" name="color"></td>
-          </tr>
-      
-   
-
-          <!-- File -->
-          <tr>
-            <td><label for="resume">Upload Resume</label></td>
-            <td><input type="file" id="resume" name="resume"></td>
-          </tr>
-      
-   
-
-          <!-- Textarea -->
-          <tr>
-            <td><label for="comments">Comments</label></td>
-            <td><textarea id="comments" name="comments" rows="3"></textarea></td>
-          </tr>
-      
-   
-
-          <!-- Hidden -->
-          <tr>
-            <td colspan="2">
-              <input type="hidden" name="source" value="webseed">
-            </td>
-          </tr>
-      
-   
-
-          <!-- Buttons -->
-          <tr>
-            <td colspan="2" align="center">
-              <input type="submit" value="Submit">
-              <input type="reset" value="Reset">
-              <button type="button">Custom Button</button>
-            </td>
-          </tr>
-      
-   
-
-        </table>
-      </form>
-      </section>
-     
-     
    
 
    </body>

@@ -1,48 +1,48 @@
-   <!DOCTYPE html>
-   <html lang="en">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>BoxModel Demo</title>
-       
-   </head>
-   <body>
-   
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+  </head>
+  <body>
+    <div
+      style="
+        width: 250px;
+        height: 250px;
+        border: solid;
+        background-color: aqua;
+        margin: 20px;
+        border-width: 5px;
+        border-radius: 10px;
+      "
+    >
+      <button
+        style="
+          width: 150px;
+          height: 75px;
+          margin: 15px;
+          padding: 10px;
+          border-width: 10px;
+          box-sizing: border-box;
+        "
+      >
+        Button
+      </button>
 
-       <section>
-           <h2>Box Model Demo</h2>
-   
-
-           <div style="background-color: cyan; width: 400px;height: 300px; border: solid;">
-               <button
-               style="
-               margin: 10px;
-               
-               border: solid;
-               
-               border-width: 10px;
-               border-color: blueviolet;
-               padding: 20px;
-               width:200px;                    
-               "
-               >Click Me</button>
-                <button
-               style="
-               margin: 10px;
-               border: solid;
-               
-               border-color: blueviolet;
-               border-width: 10px;
-               padding: 20px;
-               width: 200px;
-               box-sizing: content-box; 
-               "
-               >Second Button</button>
-   
-
-           </div>
-       </section>
-       
-   </body>
-   </html>
-  
+      <div
+        style="
+          width: 150px;
+          height: 75px;
+          border: solid;
+          border-width: 10px;
+          margin: 15px;
+          padding: 10px;
+          box-sizing: content-box;
+        "
+      >
+        Child Div
+      </div>
+    </div>
+  </body>
+</html>

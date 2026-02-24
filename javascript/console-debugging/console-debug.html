@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Console Debugging Demo</title>
+</head>
+<body>
+
+    <h1>Open Developer Tools → Console</h1>
+    <p>Right click → Inspect → Console tab</p>
+
+    <button onclick="runBasicLogs()">Run Basic Logs</button>
+    <button onclick="runWarnings()">Run Warnings & Errors</button>
+    <button onclick="runTable()">Run Table Example</button>
+    <button onclick="runTiming()">Run Performance Test</button>
+    <button onclick="runGrouping()">Run Group Example</button>
+    <button onclick="runTrace()">Run Trace Example</button>
+    <button onclick="runAssert()">Run Assert Example</button>
+
+<script>
+
+// 1️⃣ Basic console.log(), info(), warn(), error()
+function runBasicLogs() {
+    console.log("This is a normal log message");
+    console.info("This is an informational message");
+    console.warn("This is a warning message");
+    console.error("This is an error message");
+
+    let name = "Vijayan";
+    console.log("Trainer Name:", name);
+}
+
+
+// 2️⃣ Warning & Error Example
+function runWarnings() {
+    let password = "12345";
+
+    if (password.length < 8) {
+        console.warn("Password is too short!");
+    }
+
+    let isLoggedIn = false;
+
+    if (!isLoggedIn) {
+        console.error("User is not logged in!");
+    }
+}
+
+
+// 3️⃣ console.table()
+function runTable() {
+    let students = [
+        { name: "Arun", marks: 85 },
+        { name: "Divya", marks: 92 },
+        { name: "Karthik", marks: 78 }
+    ];
+
+    console.table(students);
+}
+
+
+// 4️⃣ console.time() & console.timeEnd()
+function runTiming() {
+    console.time("Loop Time");
+
+    for (let i = 0; i < 1000000; i++) {
+        // Just looping
+    }
+
+    console.timeEnd("Loop Time");
+}
+
+
+// 5️⃣ console.group()
+function runGrouping() {
+    console.group("User Details");
+
+    console.log("Name: Vijayan");
+    console.log("Role: UI Architect");
+
+    console.group("Location");
+    console.log("City: Chennai");
+    console.log("Country: India");
+    console.groupEnd();
+
+    console.groupEnd();
+}
+
+
+// 6️⃣ console.trace()
+function runTrace() {
+    function first() {
+        second();
+    }
+
+    function second() {
+        third();
+    }
+
+    function third() {
+        console.trace("Tracing function calls");
+    }
+
+    first();
+}
+
+
+// 7️⃣ console.assert()
+function runAssert() {
+    let age = 15;
+
+    console.assert(age >= 18, "User must be 18 or older");
+}
+
+</script>
+
+</body>
+</html>

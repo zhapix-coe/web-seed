@@ -1,18 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>JavaScript Console Debugging Techniques</title>
     <style>
-
-        button{
-            display: block;
-            margin: 10px;
-        }
+      button {
+        display: block;
+        margin: 10px;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1>Open Developer Tools → Console</h1>
     <p>Right click → Inspect → Console tab</p>
 
@@ -23,103 +21,118 @@
     <button onclick="runGrouping()">Run Group Example</button>
     <button onclick="runTrace()">Run Trace Example</button>
     <button onclick="runAssert()">Run Assert Example</button>
+    <button onclick="runRealtime()">Run Realtime Example</button>
 
-<script>
+    <script>
+      // 1️⃣ Basic console.log(), info(), warn(), error()
+      function runBasicLogs() {
+        console.log("This is a normal log message");
+        console.info("This is an informational message");
+        console.warn("This is a warning message");
+        console.error("This is an error message");
 
-// 1️⃣ Basic console.log(), info(), warn(), error()
-function runBasicLogs() {
-    console.log("This is a normal log message");
-    console.info("This is an informational message");
-    console.warn("This is a warning message");
-    console.error("This is an error message");
+        let name = "Vijayan";
+        console.log("Trainer Name:", name);
+      }
 
-    let name = "Vijayan";
-    console.log("Trainer Name:", name);
-}
+      // 2️⃣ Warning & Error Example
+      function runWarnings() {
+        let password = "12345";
 
+        if (password.length < 8) {
+          console.warn("Password is too short!");
+        }
 
-// 2️⃣ Warning & Error Example
-function runWarnings() {
-    let password = "12345";
+        let isLoggedIn = false;
 
-    if (password.length < 8) {
-        console.warn("Password is too short!");
-    }
+        if (!isLoggedIn) {
+          console.error("User is not logged in!");
+        }
+      }
 
-    let isLoggedIn = false;
+      // 3️⃣ console.table()
+      function runTable() {
+        let students = [
+          { name: "Arun", marks: 85 },
+          { name: "Divya", marks: 92 },
+          { name: "Karthik", marks: 78 },
+        ];
 
-    if (!isLoggedIn) {
-        console.error("User is not logged in!");
-    }
-}
+        console.table(students);
+      }
 
+      // 4️⃣ console.time() & console.timeEnd()
+      function runTiming() {
+        console.time("Loop Time");
 
-// 3️⃣ console.table()
-function runTable() {
-    let students = [
-        { name: "Arun", marks: 85 },
-        { name: "Divya", marks: 92 },
-        { name: "Karthik", marks: 78 }
-    ];
+        for (let i = 0; i < 1000000; i++) {
+          // Just looping
+        }
 
-    console.table(students);
-}
+        console.timeEnd("Loop Time");
+      }
 
+      // 5️⃣ console.group()
+      function runGrouping() {
+        console.group("User Details");
 
-// 4️⃣ console.time() & console.timeEnd()
-function runTiming() {
-    console.time("Loop Time");
+        console.log("Name: Vijayan");
+        console.log("Role: UI Architect");
 
-    for (let i = 0; i < 1000000; i++) {
-        // Just looping
-    }
+        console.group("Location");
+        console.log("City: Chennai");
+        console.log("Country: India");
+        console.groupEnd();
 
-    console.timeEnd("Loop Time");
-}
+        console.groupEnd();
+      }
 
+      // 6️⃣ console.trace()
+      function runTrace() {
+        function first() {
+          second();
+        }
 
-// 5️⃣ console.group()
-function runGrouping() {
-    console.group("User Details");
+        function second() {
+          third();
+        }
 
-    console.log("Name: Vijayan");
-    console.log("Role: UI Architect");
+        function third() {
+          console.trace("Tracing function calls");
+        }
 
-    console.group("Location");
-    console.log("City: Chennai");
-    console.log("Country: India");
-    console.groupEnd();
+        first();
+      }
 
-    console.groupEnd();
-}
+      // 7️⃣ console.assert()
+      function runAssert() {
+        let age = 15;
 
+        console.assert(age >= 18, "User must be 18 or older");
+      }
 
-// 6️⃣ console.trace()
-function runTrace() {
-    function first() {
-        second();
-    }
+      function runRealtime() {
+        // Fetch users from JSONPlaceholder API
+        fetch("https://jsonplaceholder.typicode.com/users")
+          .then((response) => response.json())
+          .then((users) => {
+            console.log("Users Data:");
 
-    function second() {
-        third();
-    }
-
-    function third() {
-        console.trace("Tracing function calls");
-    }
-
-    first();
-}
-
-
-// 7️⃣ console.assert()
-function runAssert() {
-    let age = 15;
-
-    console.assert(age >= 18, "User must be 18 or older");
-}
-
-</script>
-
-</body>
+            // Display selected fields in table format
+            console.table(
+              users.map((user) => ({
+                ID: user.id,
+                Name: user.name,
+                Email: user.email,
+                City: user.address.city,
+                Company: user.company.name,
+              })),
+            );
+          })
+          .catch((error) => {
+            console.error("Error fetching users:", error);
+          });
+      }
+    </script>
+  </body>
 </html>

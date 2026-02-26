@@ -98,7 +98,7 @@ Contributions are welcome!
 4. Submit a Pull Request
 
 ---
-
+<!--
 ## License
 
 This project is licensed under the MIT License.
@@ -113,5 +113,5 @@ If you find this helpful:
 *  Fork it
 *  Share it with others
 
----
+---* -->
 

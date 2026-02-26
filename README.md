@@ -7,7 +7,7 @@ The project covers core *HTML* structure, forms, tables, navigation, and essenti
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 
@@ -33,9 +33,9 @@ web-seed/
 
 ---
 
-## 📘 Topics Covered
+## Topics Covered
 
-### 🌐 HTML Concepts
+### HTML Concepts
 
 - Basic HTML Structure
 - Core Content Elements
@@ -43,7 +43,7 @@ web-seed/
 - Tables
 - Navigation & Links
 
-### 🎨 CSS Concepts
+### CSS Concepts
 
 - Basic Styling
 - Box Model
@@ -53,7 +53,7 @@ web-seed/
 
 ---
 
-## 🚀 How to Use
+## How to Use
 
 Clone the repository:
 
@@ -67,7 +67,7 @@ No additional installation required.
 
 ---
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 * Understand HTML document structure
 * Create forms and tables
@@ -79,7 +79,7 @@ No additional installation required.
 
 ---
 
-## 💡 Recommended Learning Flow
+## Recommended Learning Flow
 
 1. Start with the `html/` folder
 2. Move to the `css/` folder
@@ -88,7 +88,7 @@ No additional installation required.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome!
 
@@ -99,19 +99,19 @@ Contributions are welcome!
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License.
 
 ---
 
-## ⭐ Support
+## Support
 
 If you find this helpful:
 
-* ⭐ Star the repository
-* 🍴 Fork it
-* 📢 Share it with others
+*  Star the repository
+*  Fork it
+*  Share it with others
 
 ---
 

@@ -1,31 +1,56 @@
-# 🌱 Web Seed – HTML & CSS Fundamentals
+# 🌱 Web Seed – HTML, CSS & JavaScript Fundamentals
 
-This repository contains structured learning materials for HTML and CSS fundamentals.  
+This repository contains structured learning materials for HTML, CSS, and JavaScript fundamentals.  
 It is designed for beginners who want to build a strong foundation in web development.
 
 The project covers core *HTML* structure, forms, tables, navigation, and essential *CSS* styling concepts including layout, box model, and selectors.
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 
 web-seed/
 │
 ├── html/
-│   ├── 1.Structure.html
-│   ├── 2.CoreContent.html
-│   ├── 3.Form.html
-│   ├── 4.Table.html
-│   ├── 5.Navigation.html
+│ ├── 1.Structure.html
+│ ├── 2.CoreContent.html
+│ ├── 3.Form.html
+│ ├── 4.Table.html
+│ ├── 5.Navigation.html
 │
 ├── css/
-│   ├── 1.BasicStyles.html
-│   ├── 2.BoxModel.html
-│   ├── 3.LayoutDesign.html
-│   ├── 4.StyleMode.html
-│   ├── 5.Selectors.html
+│ ├── 1.BasicStyles.html
+│ ├── 2.BoxModel.html
+│ ├── 3.LayoutDesign.html
+│ ├── 4.StyleMode.html
+│ ├── 5.Selectors.html
+│
+├── javascript/
+│ ├── arrays/
+│ ├── conditions/
+│ ├── datatypes/
+│ ├── es6/
+│ ├── functions/
+│ ├── loops/
+│ ├── objects/
+│ ├── operators/
+│ ├── scopes/
+│ ├── strings/
+│ │
+│ ├── javascript-debugging/
+│ │ ├── 1.console-info.js
+│ │ ├── 2.console-warn.js
+│ │ ├── 3.console-error.js
+│ │ ├── 4.console-assert.js
+│ │ ├── 5.console-count.js
+│ │ ├── 6.console-time.js
+│ │ ├── 7.console-group.js
+│ │ ├── 8.console-trace.js
+│ │ ├── 9.console-table.js
+│ │ ├── 10.real-time.js
+│ │ └── console-log.js
 │
 └── README.md
 
@@ -33,85 +58,57 @@ web-seed/
 
 ---
 
-## Topics Covered
+## 📚 Topics Covered
 
-### HTML Concepts
+### 🧱 HTML
 
-- Basic HTML Structure
-- Core Content Elements
-- Forms & Input Fields
+- Document Structure
+- Core Content
+- Forms
 - Tables
-- Navigation & Links
+- Navigation
 
-### CSS Concepts
+### 🎨 CSS
 
 - Basic Styling
 - Box Model
 - Layout Design
 - Styling Modes
-- CSS Selectors
+- Selectors
+
+### ⚡ JavaScript
+
+- Data Types
+- Operators
+- Conditions
+- Loops
+- Functions
+- Arrays
+- Objects
+- Scopes
+- Strings
+- ES6 Features
+
+### 🛠 JavaScript Debugging
+
+- `console.log()`
+- `console.info()`
+- `console.warn()`
+- `console.error()`
+- `console.assert()`
+- `console.count()`
+- `console.time()`
+- `console.group()`
+- `console.trace()`
+- `console.table()`
 
 ---
 
-## How to Use
+## 🚀 How to Use
 
 Clone the repository:
 
 ```bash
 git clone https://github.com/<your-username>/web-seed.git
-````
-
-Open any `.html` file in your browser.
-
-No additional installation required.
 
 ---
-
-## Learning Objectives
-
-* Understand HTML document structure
-* Create forms and tables
-* Build navigation menus
-* Apply CSS styling
-* Understand the Box Model
-* Use CSS selectors effectively
-* Design simple layouts
-
----
-
-## Recommended Learning Flow
-
-1. Start with the `html/` folder
-2. Move to the `css/` folder
-3. Practice combining HTML + CSS
-4. Build small static web pages
-
----
-
-## Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-2. Create a new branch
-3. Make your changes
-4. Submit a Pull Request
-
----
-<!--
-## License
-
-This project is licensed under the MIT License.
-
----
-
-## Support
-
-If you find this helpful:
-
-*  Star the repository
-*  Fork it
-*  Share it with others
-
----* -->
-
